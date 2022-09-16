@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Greetings!</title>
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <title>Levend Mijnenveger</title>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.10.6/brython.min.js">
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/brython@3.10.6/brython_stdlib.js">
+    </script>
+    <script type="text/python" src="./mijnenveger.py"></script>
   </head>
-  <body>
-    <py-script style="font-family: monospace; white-space: pre;" src="./mijnenveger.py"></py-script>
+  <body onload="brython()">
+    <div id="mijnenveger" style="font-family: monospace; white-space: pre;"></div>
   </body>
 </html>

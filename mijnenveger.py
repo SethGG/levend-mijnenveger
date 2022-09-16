@@ -1,4 +1,5 @@
 import random
+from browser import document, html
 
 RIJEN = 10
 KOLOMMEN = 10
@@ -57,7 +58,7 @@ def main():
     line = "   "
     for i in range(KOLOMMEN):
         line += "%d "%i
-    print(line)
+    document["mijnenveger"] <= html.DIV(line)
     for i, rij in enumerate(board):
         line = "%d |"%i
         for vakje in rij:
@@ -65,7 +66,7 @@ def main():
                 line += "X|"
             else:
                 line += " |"
-        print(line)
+        document["mijnenveger"] <= html.DIV(line)
 
 
 if __name__ == "__main__":
