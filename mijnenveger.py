@@ -53,14 +53,18 @@ def maakBoard():
     
     return board
 
-def main():
+def main(*args):
+    document["mijnenveger"].clear()
+    global RIJEN, KOLOMMEN
+    RIJEN = int(document["rijen"].value)
+    KOLOMMEN = int(document["kolommen"].value)
     board = maakBoard()
     line = "   "
     for i in range(KOLOMMEN):
-        line += "%d "%i
+        line += "%d "%(i%10)
     document["mijnenveger"] <= html.DIV(line)
     for i, rij in enumerate(board):
-        line = "%d |"%i
+        line = "%d |"%(i%10)
         for vakje in rij:
             if vakje:
                 line += "X|"
@@ -70,4 +74,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    document["knop"].bind("click", main)

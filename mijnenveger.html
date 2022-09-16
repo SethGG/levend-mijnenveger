@@ -13,6 +13,15 @@
     <script type="text/python" src="./mijnenveger.py"></script>
   </head>
   <body onload="brython()">
+    <h2>Levend Mijnenveger</h2>
+    <div id="opties">
+      <label for="rijen">Aantal rijen:</label><br>
+      <input type="number" id="rijen" name="rijen" value="10"><br>
+      <label for="kolommen">Aantal kolommen:</label><br>
+      <input type="number" id="kolommen" name="kolommen" value="10"><br><br>
+      <input type="button" id="knop" value="Maak veld">
+    </div>
+    <br>
     <div id="mijnenveger" style="font-family: monospace; white-space: pre;"></div>
   </body>
 </html>
